@@ -1,5 +1,7 @@
 #pragma once
 
+#include <chrono>
+
 class FpsHandler
 {
 public:
@@ -26,7 +28,7 @@ private:
     std::chrono::duration<double> enqueue_interval_;
 
     /*! \brief Begin time point of the wait */
-    std::chrono::steady_clock::time_point begin_time_;
+    std::chrono::system_clock::time_point begin_time_;
 
     /*! \brief Time wasted in last wait (if waiting was too long) */
     std::chrono::duration<double> wasted_time_{0};

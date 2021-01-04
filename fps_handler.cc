@@ -1,5 +1,7 @@
 #include "fps_handler.hh"
 
+#include <chrono>
+
 FpsHandler::FpsHandler(unsigned int fps)
     : enqueue_interval_((1 / static_cast<double>(fps)))
 {
